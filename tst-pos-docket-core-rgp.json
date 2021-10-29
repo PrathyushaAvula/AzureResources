@@ -9,13 +9,6 @@
     "rgLocation": {
       "type": "string",
       "defaultValue": "australiasoutheast"
-    },
-    "appInsightsName": {
-      "type": "string",
-      "defaultValue": "tst-pos-docket-core-ain",
-      "metadata": {
-        "description": "The  name of the application insights."
-      }
     }
   },
   "variables": {},
@@ -37,6 +30,19 @@
         "template": {
           "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
+          "parameters": {
+            "appInsightsName": {
+              "type": "string",
+              "defaultValue": "tst-pos-docket-core-ain",
+              "metadata": {
+                "description": "The  name of the application insights."
+              }
+            },
+            "rgLocation": {
+              "type": "string",
+              "defaultValue": "australiasoutheast"
+            }
+          },
           "resources": [
             {
               "type": "Microsoft.Insights/components",
