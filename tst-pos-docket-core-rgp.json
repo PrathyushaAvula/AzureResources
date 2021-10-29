@@ -9,7 +9,7 @@
     "rgLocation": {
       "type": "string",
       "defaultValue": "australiasoutheast"
-    },
+    },      
     "appInsightsName": {
       "type": "string",
       "defaultValue": "tst-pos-docket-core-ain",
@@ -18,10 +18,9 @@
       }
     }
   },
-  "variables": {},
   "resources": [
     {
-      "type": "Microsoft.Resources/resourceGroups",
+      "type": "Microsoft.Resources/Deployments",
       "apiVersion": "2018-05-01",
       "location": "[parameters('rgLocation')]",
       "name": "[parameters('rgName')]",
@@ -32,27 +31,18 @@
         "teams": "mw",
         "function": "pos"
       },
-      "properties": {
-        "mode": "Incremental",
-        "template": {
-          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-          "contentVersion": "1.0.0.0",
-          "parameters": {},
-          "variables": {},
-          "resources": [
-            {
-              "type": "Microsoft.Insights/components",
-              "apiVersion": "2020-02-02",
-              "name": "[parameters('appInsightsName')]",
-              "location": "[parameters('rgLocation')]",
-              "kind": "web",
-              "properties": {
-                "Application_Type": "web"
-              }
-            }
-          ]
+      "resources": [
+        {
+          "type": "Microsoft.Insights/components",
+          "apiVersion": "2020-02-02",
+          "name": "[parameters('appInsightsName')]",
+          "location": "[parameters('rgLocation')]",
+          "kind": "web",
+          "properties": {
+            "Application_Type": "web"
+          }
         }
-      }
+      ]
     }
   ]
 }
