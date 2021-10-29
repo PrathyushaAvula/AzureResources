@@ -3,19 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "rgName": {
-      "defaultValue": "tst-pos-docket-core-rgp",
       "type": "string"
     },
     "rgLocation": {
       "type": "string",
       "defaultValue": "australiasoutheast"
-    },      
-    "appInsightsName": {
-      "type": "string",
-      "defaultValue": "tst-pos-docket-core-ain",
-      "metadata": {
-        "description": "The  name of the application insights."
-      }
     }
   },
   "resources": [
@@ -30,16 +22,6 @@
         "environment": "dev",
         "teams": "mw",
         "function": "pos"
-      }
-    },
-    {
-      "type": "Microsoft.Insights/components",
-      "apiVersion": "2020-02-02",
-      "name": "[parameters('appInsightsName')]",
-      "location": "[parameters('rgLocation')]",
-      "kind": "web",
-      "properties": {
-        "Application_Type": "web"
       }
     }
   ]
