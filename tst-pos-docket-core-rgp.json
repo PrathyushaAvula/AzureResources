@@ -9,18 +9,18 @@
     "rgLocation": {
       "type": "string",
       "defaultValue": "australiasoutheast"
-    }
-  },
-  "appInsightsName": {
-    "value": "tst-pos-docket-core-ain",
-    "metadata": {
-      "description": "The  name of the application insights."
-    }
-  },
-  "appInsightsLocation": {
-    "value": "[resourceGroup().location]",
-    "metadata": {
-      "description": "The name of the location of application insights"
+    },
+    "appInsightsName": {
+      "value": "tst-pos-docket-core-ain",
+      "metadata": {
+        "description": "The  name of the application insights."
+      }
+    },
+    "appInsightsLocation": {
+      "value": "[resourceGroup().location]",
+      "metadata": {
+        "description": "The name of the location of application insights"
+      }
     }
   },
   "variables": {},
