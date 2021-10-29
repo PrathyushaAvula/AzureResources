@@ -2,11 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "subscriptionId": {
+            "value": "2680ffbc-7b25-4b1b-9bd7-96369150d32f"
+        },
         "rgName": {
             "value": "tst-pos-docket-core-rgp"
         },
-        "rgLocation": {
+        "Location": {
             "value": "australiasoutheast"
+        },
+        "appInsightsName":{
+            "value": "tst-pos-docket-core-ain"
         }
     }
 }
