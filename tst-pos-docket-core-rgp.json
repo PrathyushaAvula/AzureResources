@@ -17,6 +17,12 @@
       "description": "The  name of the application insights."
     }
   },
+  "appInsightsLocation": {
+    "value": "[resourceGroup().location]",
+    "metadata": {
+      "description": "The name of the location of application insights"
+    }
+  },
   "variables": {},
   "resources": [
     {
